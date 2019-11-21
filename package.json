@@ -1,0 +1,40 @@
+{
+  "name": "pm2-syslogx",
+  "version": "1.0.0",
+  "description": "PM2 Syslog Module",
+  "main": "./dist/app.js",
+  "dependencies": {
+    "pmx": "^1.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fourthofgaugust/pm2-syslogx.git"
+  },
+  "config": {
+    "host": "localhost",
+    "facility": "user"
+  },
+  "apps": [
+    {
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "./dist/app.js"
+    }
+  ],
+  "author": "Fourth of August",
+  "license": "MIT",
+  "devDependencies": {
+    "gts": "^1.1.2",
+    "typescript": "~3.7.0",
+    "@types/node": "^10.0.3"
+  },
+  "scripts": {
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
+  }
+}
