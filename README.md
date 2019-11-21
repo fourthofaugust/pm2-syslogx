@@ -8,15 +8,15 @@ pm2 install pm2-syslogx
 ## Configuration
 This module is bundled with the following default configuration
 ```javascript
-      {
-        "host": "localhost", // syslog server hostname
-        "facility": "user", // syslog facility
-        "logLevel" : "info", // syslog supported log level
-        "port" : 514, // syslog port
-        "json" : false, // output log as a JSON
-        "skipPM2" : false, // toggle pm2 core service logs
-        "apps": ["all"] // apps to log
-      }
+{
+  "host": "localhost", // syslog server hostname
+  "facility": "user", // syslog facility
+  "logLevel" : "info", // syslog supported log level
+  "port" : 514, // syslog port
+  "json" : false, // output log as a JSON
+  "skipPM2" : false, // toggle pm2 core service logs
+  "apps": ["all"] // apps to log
+}
 ````
 In order to update a property, please use the following syntax
 ```bash
@@ -24,7 +24,7 @@ pm2 set pm2-syslogx:<attr> <val>
 ```
 
 ## Uninstall
-In order to uninstall the module, please use the following command
+In order to uninstall the module, please run the following command
 ```bash
 pm2 uninstall pm2-syslogx
 ```
