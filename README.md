@@ -20,7 +20,7 @@ This module is bundled with the following default configuration
 ````
 In order to update a property, please use the following syntax
 ```bash
-pm2 set <module-name>:<attr> <val>
+pm2 set pm2-syslogx:<attr> <val>
 ```
 
 ## Uninstall
